@@ -4,28 +4,24 @@ package Estructuras;
 import java.util.concurrent.ThreadLocalRandom;
 
 
-public class Nivel1  {
+public class Niveles  {
     
-    //public void Nivel1(){
     int min;
     int max;
     
     Linked_List listadragones = new Linked_List();
     
-    
+    //*Crea un numero aleatoria que va de 1 a 100
     private int getNumeroRandom(){
         this.min = 0;
         this.max = 100;
         return ThreadLocalRandom.current().nextInt(min, max);
     }
     
-    
-    public void graficoArbol(){
-        
-    }
+
     
     //*Crea el nivel 1 donde hay 15 dragones
-    public void Nivel1(){
+    public Linked_List Nivel1(){
         
         
         getNumeroRandom();
@@ -89,14 +85,13 @@ public class Nivel1  {
         
         Position posdragon15 = new Position(getNumeroRandom(),getNumeroRandom());
         Dragon dragon15 = new Dragon("Quetza", 3,502,1,1,"Wawel",posdragon15);
-        
-        //listadragones.append(dragon15);
+        listadragones.append(dragon15);
         //listadragones.printList();
         //listadragones.SelectionSortporEdadmM(listadragones);
         //listadragones.printList();
 
         
-        
+        return listadragones;
         
         
         
